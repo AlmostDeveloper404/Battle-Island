@@ -31,19 +31,19 @@ public class Enemy : MonoBehaviour
     {
         if (Direction==Directions.Down)
         {
-            MoveDown();
+            directionToMove = Vector3.back;
         }
         if (Direction == Directions.Up)
         {
-            MoveUp();
+            directionToMove = Vector3.forward;
         }
         if (Direction==Directions.Right)
         {
-            MoveRight();
+            directionToMove = Vector3.right;
         }
         if (Direction==Directions.left)
         {
-            MoveLeft();
+            directionToMove = Vector3.left;
         }
 
         timer += Time.deltaTime;
@@ -55,19 +55,19 @@ public class Enemy : MonoBehaviour
 
     void MoveUp()
     {
-        directionToMove = Vector3.forward;
+        Direction = Directions.Up;
     }
     void MoveDown()
     {
-        directionToMove = Vector3.back;
+        Direction = Directions.Down;
     }
     void MoveRight()
     {
-        directionToMove = Vector3.right;
+        Direction = Directions.Right;
     }
     void MoveLeft()
     {
-        directionToMove = Vector3.left;
+        Direction = Directions.left;
     }
 
     void ChangeDirection()
