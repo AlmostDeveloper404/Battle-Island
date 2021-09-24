@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (Direction==Directions.Down)
+        if (Direction == Directions.Down)
         {
             MoveDown();
         }
@@ -37,11 +37,11 @@ public class Enemy : MonoBehaviour
         {
             MoveUp();
         }
-        if (Direction==Directions.Right)
+        if (Direction == Directions.Right)
         {
             MoveRight();
         }
-        if (Direction==Directions.left)
+        if (Direction == Directions.left)
         {
             MoveLeft();
         }
@@ -52,6 +52,12 @@ public class Enemy : MonoBehaviour
             ChangeDirection();
         }
     }
+
+    private void FixedUpdate()
+    {
+        _rigidBody.velocity = directionToMove * Speed;
+    }
+
 
     void MoveUp()
     {
@@ -94,10 +100,4 @@ public class Enemy : MonoBehaviour
 
 
     }
-
-    private void FixedUpdate()
-    {
-        _rigidBody.velocity = directionToMove*Speed;
-    }
-
 }
