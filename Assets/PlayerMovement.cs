@@ -22,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 direction = Vector3.zero; 
 
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
         if(Mathf.Abs(horizontal) > Mathf.Abs(vertical))
         {

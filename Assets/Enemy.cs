@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public float Speed=10f;
 
     Vector3 directionToMove;
+    Vector3 rotationVector;
 
     public Directions Direction;
 
@@ -31,18 +32,22 @@ public class Enemy : MonoBehaviour
     {
         if (Direction == Directions.Down)
         {
+            transform.rotation = Quaternion.Euler(0f,180f,0f);
             directionToMove = Vector3.back;
         }
         if (Direction == Directions.Up)
         {
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             directionToMove = Vector3.forward;
         }
         if (Direction == Directions.Right)
         {
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
             directionToMove = Vector3.right;
         }
         if (Direction == Directions.left)
         {
+            transform.rotation = Quaternion.Euler(0f, 270f, 0f);
             directionToMove = Vector3.left;
         }
 
