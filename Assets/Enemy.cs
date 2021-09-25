@@ -15,7 +15,6 @@ public class Enemy : MonoBehaviour
     public float Speed=10f;
 
     Vector3 directionToMove;
-    Vector3 rotationVector;
 
     public Directions Direction;
 
