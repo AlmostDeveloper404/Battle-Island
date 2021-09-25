@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     [SerializeField] private float _speed;
 
+
+    private Vector3 _directionToMove;
     private Rigidbody _rigidbody;
+
 
     private void Awake()
     {
@@ -18,39 +22,35 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody.velocity = GetDirection() * _speed;
     }
 
-    Vector3 GetDirection()
+    Vector3 GetDirection() 
     {
-        Vector3 direction = Vector3.zero; 
-
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-
-        if(Mathf.Abs(horizontal) > Mathf.Abs(vertical))
+        _directionToMove = Vector3.zero;
+        
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            if(horizontal > 0)
-            {
-                direction = Vector3.right;
-            }
-            else
-            {
-                direction = Vector3.left;
-            }
-        }
-        else if(Mathf.Abs(vertical) > Mathf.Abs(horizontal))
-        {
-            if(vertical > 0)
-            {
-                direction = Vector3.forward;
-            }
-            else
-            {
-                direction = Vector3.back;
-            }
+            transform.rotation = Quaternion.identity;
+            _directionToMove = Vector3.forward;
         }
 
-        return direction;
+        if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.rotation = Quaternion.Euler(0f,180f,0f);
+            _directionToMove = Vector3.back;
+        }
+
+        if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+            _directionToMove = Vector3.right;
+        }
+        
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.rotation = Quaternion.Euler(0f, 270f, 0f);
+            _directionToMove = Vector3.left;
+        }
+
+        return _directionToMove;
     }
-
-
-
 }
+

@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyShooting : MonoBehaviour
 {
     public float TimeToShoot=0.5f;
-    [SerializeField]float timer;
+    [SerializeField] float timer;
 
     public float BulletSpeed;
 
