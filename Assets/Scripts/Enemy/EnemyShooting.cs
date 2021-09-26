@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyShooting : MonoBehaviour
 {
     public float TimeToShoot=0.5f;
-    [SerializeField]float timer;
+    [SerializeField] float timer;
 
     public float BulletSpeed;
 
@@ -22,7 +22,7 @@ public class EnemyShooting : MonoBehaviour
 
     void Shoot()
     {
-        GameObject BulletGO= Instantiate(Preb,FirePoint.position,FirePoint.rotation);
+        GameObject BulletGO = Instantiate(Preb,FirePoint.position,FirePoint.rotation, transform);
         BulletGO.GetComponent<Rigidbody>().velocity = transform.forward * BulletSpeed;
     }
 }

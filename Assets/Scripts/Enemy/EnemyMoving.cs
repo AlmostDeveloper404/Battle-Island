@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyMoving : MonoBehaviour
 {
     public enum Directions 
     {
@@ -82,7 +82,6 @@ public class Enemy : MonoBehaviour
 
     void ChangeDirection()
     {
-        Debug.Log("Yep");
         timer = 0;
         RandomDirection = Random.Range(0,4);
         switch (RandomDirection) 
