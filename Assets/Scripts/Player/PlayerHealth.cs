@@ -15,4 +15,12 @@ public class PlayerHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void AddHealth()
+    {
+        if(_health < 3)
+        {
+            _health++;
+        }
+    }
 }
