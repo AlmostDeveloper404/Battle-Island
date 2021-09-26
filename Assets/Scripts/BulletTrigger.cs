@@ -6,6 +6,11 @@ public class BulletTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
+       DestroyBullet();
+    }
+
+    public void DestroyBullet()
+    {
         Destroy(gameObject);
     }
 }

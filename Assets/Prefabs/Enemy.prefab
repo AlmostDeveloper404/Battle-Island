@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9147556192142646207}
   - component: {fileID: 9147556192142646204}
   - component: {fileID: 9147556192142646205}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,10 +104,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9147556192392934615}
-  - component: {fileID: 9147556192392934612}
   - component: {fileID: 9147556192392934613}
+  - component: {fileID: 9147556192392934612}
   - component: {fileID: 9147556192392934614}
-  m_Layer: 6
+  - component: {fileID: 1488039728743083109}
+  - component: {fileID: 9021006023381293497}
+  m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,22 +132,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9147556192392934612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9147556192392934610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da4b6eedb4f05f142a771fd4f7ef3500, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RandomDirection: 0
-  Speed: 10
-  Direction: 0
-  TimeToChangeDirection: 1
 --- !u!54 &9147556192392934613
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -162,6 +148,22 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &9147556192392934612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147556192392934610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4b6eedb4f05f142a771fd4f7ef3500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomDirection: 0
+  Speed: 10
+  Direction: 0
+  TimeToChangeDirection: 1
 --- !u!114 &9147556192392934614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,8 +179,34 @@ MonoBehaviour:
   TimeToShoot: 0.5
   timer: 0
   BulletSpeed: 100
-  Preb: {fileID: 2673632978114147163, guid: 479c94de845743b4da055bcf410f0c12, type: 3}
+  Preb: {fileID: 2673632978114147163, guid: 2b16123eff392a1408ea4e4741edc109, type: 3}
   FirePoint: {fileID: 9147556192910981128}
+--- !u!114 &1488039728743083109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147556192392934610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386fa44011d86d54a98b3a70b1ef84e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 1
+--- !u!114 &9021006023381293497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147556192392934610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af6dc71cbb7f4b4e99fba6e4db265fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyHealth: {fileID: 1488039728743083109}
 --- !u!1 &9147556192910981129
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9147556192910981128}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

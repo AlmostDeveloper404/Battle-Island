@@ -7477,6 +7477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 719272408}
   - component: {fileID: 719272407}
+  - component: {fileID: 719272410}
   - component: {fileID: 719272406}
   - component: {fileID: 719272409}
   m_Layer: 0
@@ -7547,6 +7548,19 @@ MonoBehaviour:
   _shotPeriod: 0.4
   _bulletPrefab: {fileID: 2673632978114147163, guid: 479c94de845743b4da055bcf410f0c12, type: 3}
   _firePoint: {fileID: 1279398912}
+--- !u!114 &719272410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719272405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c283076adb79eed418627d1cdafc2c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 2
 --- !u!1 &724792051
 GameObject:
   m_ObjectHideFlags: 0
@@ -8607,6 +8621,10 @@ PrefabInstance:
     - target: {fileID: 9147556192392934615, guid: 37b7c7561d1c3b94c820986ef2ef88f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147556192910981128, guid: 37b7c7561d1c3b94c820986ef2ef88f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: 9147556192910981129, guid: 37b7c7561d1c3b94c820986ef2ef88f7, type: 3}
       propertyPath: m_Layer

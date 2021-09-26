@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyMoving : MonoBehaviour
 {
     public enum Directions 
     {
