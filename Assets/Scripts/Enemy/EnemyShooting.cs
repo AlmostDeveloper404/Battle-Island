@@ -22,7 +22,7 @@ public class EnemyShooting : MonoBehaviour
 
     void Shoot()
     {
-        GameObject BulletGO= Instantiate(Preb,FirePoint.position,FirePoint.rotation);
+        GameObject BulletGO = Instantiate(Preb,FirePoint.position,FirePoint.rotation, transform);
         BulletGO.GetComponent<Rigidbody>().velocity = transform.forward * BulletSpeed;
     }
 }

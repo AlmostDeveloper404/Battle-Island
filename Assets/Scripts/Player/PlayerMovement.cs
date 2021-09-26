@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
     [SerializeField] private float _speed;
 
 
@@ -29,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.rotation = Quaternion.identity;
-            _directionToMove = Vector3.forward;
+            _directionToMove = Vector3.forward; 
         }
 
         if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
