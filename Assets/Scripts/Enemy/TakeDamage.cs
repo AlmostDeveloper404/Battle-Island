@@ -10,7 +10,6 @@ public class TakeDamage : MonoBehaviour
     {
         if(other.attachedRigidbody)
         {
-            Debug.Log(other.attachedRigidbody.name);
             BulletTrigger bullet = other.attachedRigidbody.GetComponent<BulletTrigger>();
             if(bullet && other.attachedRigidbody.name == "PlayerBullet(Clone)")
             {
