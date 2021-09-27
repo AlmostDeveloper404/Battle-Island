@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _speed;
-
-
     private Vector3 _directionToMove;
     private Rigidbody _rigidbody;
 
@@ -52,4 +50,3 @@ public class PlayerMovement : MonoBehaviour
         return _directionToMove;
     }
 }
-

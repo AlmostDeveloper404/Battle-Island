@@ -11,6 +11,7 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private float _spawnTimer, _maxEnemys;
 
     [SerializeField] private List<GameObject> _enemys = new List<GameObject>();
+
     private float _timer;
 
     void Start()
@@ -35,12 +36,17 @@ public class EnemySpawn : MonoBehaviour
 
     void SpawnEnemy()
     {
-        GameObject newEnemy = Instantiate(_enemyPrefab, _spawnTransforms[Random.Range(0, 2)].position, _spawnTransforms[0].rotation, transform);
+        GameObject newEnemy = Instantiate(_enemyPrefab, _spawnTransforms[Random.Range(0, 3)].position, _spawnTransforms[0].rotation, transform);
         _enemys.Add(newEnemy);
     }
 
     public void RemoveFromEnemys(GameObject enemy)
     {
         _enemys.Remove(enemy);
+    }
+
+    public List<GameObject> GetEnemys()
+    {
+        return _enemys;
     }
 }
