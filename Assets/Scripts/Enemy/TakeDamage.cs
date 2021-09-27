@@ -13,7 +13,6 @@ public class TakeDamage : MonoBehaviour
             BulletTrigger bullet = other.attachedRigidbody.GetComponent<BulletTrigger>();
             if(bullet && other.attachedRigidbody.name == "PlayerBullet(Clone)")
             {
-                bullet.DestroyBullet();
                 _enemyHealth.TakeDamage(1);
             }
         }
