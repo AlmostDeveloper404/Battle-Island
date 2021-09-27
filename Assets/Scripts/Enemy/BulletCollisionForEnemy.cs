@@ -2,19 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletCollision : MonoBehaviour
+public class BulletCollisionForEnemy : MonoBehaviour
 {
     public int Damage;
 
     
     private void OnTriggerEnter(Collider other)
     {
+        PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
         
-        EnemyHealth enemyHealth = other.GetComponentInParent<EnemyHealth>();
-        
-        if (enemyHealth)
+        if (playerHealth)
         {
-            enemyHealth.TakeDamage(Damage);
+            playerHealth.TakeDamage(Damage);
             DestroyBullet();
         }
         DestroyBullet();
