@@ -24,7 +24,10 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        _enemySpawn.RemoveFromEnemys(gameObject);
         Destroy(gameObject);
+    }
+    void OnDestroy()
+    {
+        _enemySpawn.RemoveFromEnemys(gameObject);
     }
 }

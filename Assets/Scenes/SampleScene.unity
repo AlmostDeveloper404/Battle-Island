@@ -1164,6 +1164,7 @@ MonoBehaviour:
   _boostPrefabs:
   - {fileID: 2725472228539335403, guid: d095996193d2e2a4bb3d9c6d37e9ffea, type: 3}
   - {fileID: 7837672408942285820, guid: e250d7437eb28444bb1abc8b63e29cec, type: 3}
+  - {fileID: 6569956482653697982, guid: 363912c1d2d000f47b8c2994ca487da3, type: 3}
   _spawnPositions:
   - {fileID: 1118434613}
   - {fileID: 1406070561}
