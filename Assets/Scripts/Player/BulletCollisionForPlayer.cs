@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletCollision : MonoBehaviour
+public class BulletCollisionForPlayer : MonoBehaviour
 {
     public int Damage;
 

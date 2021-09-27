@@ -4,23 +4,42 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-   [SerializeField] private int _health = 2;
+    [SerializeField] private int _health = 3;
 
-    public void TakeDamage(int damageValue)
+    [SerializeField] private Vector3 _playerStartPosition;
+
+    private bool _invulnerable = false;
+
+    void Start() 
     {
-        _health -= damageValue;
-        if(_health <= 0)
+        _playerStartPosition = transform.position;
+    }
+
+    public void TakeDamage()
+    {
+        if(!_invulnerable)
         {
-            _health = 0;
-            Destroy(gameObject);
+            if(_health > 0)
+            {
+                transform.position = _playerStartPosition;
+                _health--;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            _invulnerable = true;
+            Invoke("StopInvulnerable", 3f);
         }
+    }
+
+    void StopInvulnerable()
+    {
+        _invulnerable = false;
     }
 
     public void AddHealth()
     {
-        if(_health < 3)
-        {
-            _health++;
-        }
+        _health++;
     }
 }

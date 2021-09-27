@@ -15,7 +15,7 @@ public class Blocks : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponentInParent<BulletCollision>())
+        if (other.GetComponentInParent<BulletTrigger>())
         {
             SwitchModels();
         }
