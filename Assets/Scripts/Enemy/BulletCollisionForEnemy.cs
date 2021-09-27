@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class BulletCollisionForEnemy : MonoBehaviour
 {
-    public int Damage;
-
-    
     private void OnTriggerEnter(Collider other)
     {
         PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
         
         if (playerHealth)
         {
-            playerHealth.TakeDamage(Damage);
+            playerHealth.TakeDamage();
             DestroyBullet();
         }
         DestroyBullet();
