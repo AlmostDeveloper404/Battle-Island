@@ -10,6 +10,7 @@ public class HealthBoost : MonoBehaviour
     {
         _boostSpawn = FindObjectOfType<BoostSpawn>();
     }
+    
     private void OnTriggerEnter(Collider other)
     {
         if(other.attachedRigidbody)
@@ -20,7 +21,7 @@ public class HealthBoost : MonoBehaviour
             {
                 playerHealth.AddHealth();
                 _boostSpawn.DeductBoostInGame();
-                Destroy(gameObject);
+                Destroy(transform.parent.gameObject);
             }
         }
     }

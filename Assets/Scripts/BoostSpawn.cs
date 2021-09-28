@@ -23,7 +23,7 @@ public class BoostSpawn : MonoBehaviour
             {
                 _timer = 0f;
 
-                GameObject newBoost = Instantiate(_boostPrefabs[Random.Range(0, 2)], _spawnPositions[Random.Range(0, 8)].position, Quaternion.identity, transform);
+                GameObject newBoost = Instantiate(_boostPrefabs[Random.Range(0, 6)], _spawnPositions[Random.Range(0, 9)].position, Quaternion.identity, transform);
                 _boostsInGame ++;
 
                 Renderer renderer = newBoost.GetComponentInChildren<Renderer>();

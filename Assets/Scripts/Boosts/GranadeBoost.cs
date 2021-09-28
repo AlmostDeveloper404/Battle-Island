@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeBoost : MonoBehaviour
+public class GranadeBoost : MonoBehaviour
 {
-    private GameManager _gameManager;
+    private EnemySpawn _enemySpawn;
     private BoostSpawn _boostSpawn;
 
-    void Awake()
+    void Awake() 
     {
-        _gameManager = FindObjectOfType<GameManager>();
+        _enemySpawn = FindObjectOfType<EnemySpawn>();
         _boostSpawn = FindObjectOfType<BoostSpawn>();
     }
 
@@ -19,8 +19,10 @@ public class TimeBoost : MonoBehaviour
         {
             if(other.attachedRigidbody.GetComponent<PlayerHealth>())
             {
-                _gameManager.StopingTimeEnemys();
-                _gameManager.ResumeTimeEnemysInInvoke();
+                foreach(GameObject enemy in _enemySpawn.GetEnemys())
+                {
+                    Destroy(enemy);
+                }
                 _boostSpawn.DeductBoostInGame();
                 Destroy(transform.parent.gameObject);
             }

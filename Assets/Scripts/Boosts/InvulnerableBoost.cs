@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeBoost : MonoBehaviour
+public class InvulnerableBoost : MonoBehaviour
 {
-    private GameManager _gameManager;
     private BoostSpawn _boostSpawn;
 
     void Awake()
     {
-        _gameManager = FindObjectOfType<GameManager>();
         _boostSpawn = FindObjectOfType<BoostSpawn>();
     }
 
@@ -17,10 +15,10 @@ public class TimeBoost : MonoBehaviour
     {
         if(other.attachedRigidbody)
         {
-            if(other.attachedRigidbody.GetComponent<PlayerHealth>())
+            PlayerHealth playerHealth = other.attachedRigidbody.GetComponent<PlayerHealth>();
+            if(playerHealth)
             {
-                _gameManager.StopingTimeEnemys();
-                _gameManager.ResumeTimeEnemysInInvoke();
+                playerHealth.StartInvulnerable(5);
                 _boostSpawn.DeductBoostInGame();
                 Destroy(transform.parent.gameObject);
             }

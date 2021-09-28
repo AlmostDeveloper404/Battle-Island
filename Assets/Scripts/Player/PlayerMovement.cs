@@ -50,4 +50,15 @@ public class PlayerMovement : MonoBehaviour
 
         return _directionToMove;
     }
+
+    public void IncreaseSpeed()
+    {
+        _speed *= 2f;
+        Invoke("DecreaseSpeed", 5f);
+    }
+
+    public void DecreaseSpeed()
+    {
+        _speed /= 2f;
+    }
 }
