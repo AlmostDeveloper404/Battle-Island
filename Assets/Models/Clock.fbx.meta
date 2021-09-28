@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Black
-    second: {fileID: 2100000, guid: a6c956984d699e544acb7c759f11c383, type: 2}
+    second: {fileID: 2100000, guid: cffdafaa5e8add145963128c31189a4c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Brown
-    second: {fileID: 2100000, guid: f33ee4db498829649887eb5da7096d37, type: 2}
+    second: {fileID: 2100000, guid: be3e73dc4ee5a7047905779c14ba41d2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
