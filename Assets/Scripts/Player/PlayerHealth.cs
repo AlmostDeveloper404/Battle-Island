@@ -28,9 +28,15 @@ public class PlayerHealth : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            _invulnerable = true;
-            Invoke("StopInvulnerable", 3f);
+
+            StartInvulnerable(3);
         }
+    }
+
+    public void StartInvulnerable(float time)
+    {
+        _invulnerable = true;
+        Invoke("StopInvulnerable", time);
     }
 
     void StopInvulnerable()
