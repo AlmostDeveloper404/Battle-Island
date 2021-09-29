@@ -144,7 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1
-  _enemySpawn: {fileID: 0}
 --- !u!114 &9021006023381293497
 MonoBehaviour:
   m_ObjectHideFlags: 0

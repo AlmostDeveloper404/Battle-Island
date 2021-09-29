@@ -15292,7 +15292,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8935c6ce01839074eb55e15f4e2aaa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 9147556192392934610, guid: 37b7c7561d1c3b94c820986ef2ef88f7, type: 3}
+  _enemyPrefabs:
+  - {fileID: 1230896033340311446, guid: c94402802e63fc1478b18032b1b3f6aa, type: 3}
+  - {fileID: 5720191526863957016, guid: d0f2b70870645bc45999925c7049afbc, type: 3}
+  - {fileID: 4499980174572633192, guid: ef83298bb5b697a4f950bfc45751c37b, type: 3}
+  - {fileID: 9147556192392934610, guid: 37b7c7561d1c3b94c820986ef2ef88f7, type: 3}
   _spawnTransforms:
   - {fileID: 1731989250}
   - {fileID: 1998181432}

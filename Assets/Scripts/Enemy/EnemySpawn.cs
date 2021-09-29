@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnemySpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private GameObject[] _enemyPrefabs;
 
     [SerializeField] private Transform[] _spawnTransforms;
 
@@ -40,7 +40,11 @@ public class EnemySpawn : MonoBehaviour
 
     void SpawnEnemy()
     {
-        GameObject newEnemy = Instantiate(_enemyPrefab, _spawnTransforms[Random.Range(0, 3)].position, _spawnTransforms[0].rotation, transform);
+        int randomEnemy = Random.Range(0,4);
+        Vector3 randomPosition = _spawnTransforms[Random.Range(0, 3)].position;
+        Vector3 enemyPosition = new Vector3(randomPosition.x, _enemyPrefabs[randomEnemy].transform.position.y, randomPosition.z);
+
+        GameObject newEnemy = Instantiate(_enemyPrefabs[randomEnemy], enemyPosition, _spawnTransforms[0].rotation, transform);
         _enemys.Add(newEnemy);
         _remainingEnemys --;
         DisplayRemainingEnemys();
