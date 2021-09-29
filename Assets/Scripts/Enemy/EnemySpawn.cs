@@ -20,7 +20,7 @@ public class EnemySpawn : MonoBehaviour
     void Start()
     {
         SpawnEnemy();
-        DisplayRemainingEnemys();
+        //DisplayRemainingEnemys();
     }
 
     void Update()
@@ -43,7 +43,7 @@ public class EnemySpawn : MonoBehaviour
         GameObject newEnemy = Instantiate(_enemyPrefab, _spawnTransforms[Random.Range(0, 3)].position, _spawnTransforms[0].rotation, transform);
         _enemys.Add(newEnemy);
         _remainingEnemys --;
-        DisplayRemainingEnemys();
+        //DisplayRemainingEnemys();
     }
 
     public void RemoveFromEnemys(GameObject enemy)
@@ -56,8 +56,8 @@ public class EnemySpawn : MonoBehaviour
         return _enemys;
     }
 
-    void DisplayRemainingEnemys()
-    {
-        _remainingEnemysText.text = $"{_remainingEnemys}";
-    }
+    //void DisplayRemainingEnemys()
+    //{
+    //    _remainingEnemysText.text = $"{_remainingEnemys}";
+    //}
 }
