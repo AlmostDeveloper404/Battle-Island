@@ -9,14 +9,13 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private Vector3 _playerStartPosition;
 
-    //[SerializeField] private Text _textHeath;
+    [SerializeField] private Displayer _displayer;
 
     private bool _invulnerable = false;
 
     void Start() 
     {
         _playerStartPosition = transform.position;
-        //DisplayHealth();
     }
 
     public void TakeDamage()
@@ -32,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
                 Destroy(gameObject);
             }
             _health--;
-            //DisplayHealth();
+            _displayer.DisplayHealth();
             StartInvulnerable(3);
         }
     }
@@ -51,11 +50,11 @@ public class PlayerHealth : MonoBehaviour
     public void AddHealth()
     {
         _health++;
-        //DisplayHealth();
+        _displayer.DisplayHealth();
     }
 
-    //void DisplayHealth()
-    //{
-    //    _textHeath.text = $"{_health}";
-    //}
+    public int GetHealth()
+    {
+        return _health;
+    }
 }
