@@ -4119,7 +4119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _boostPrefabs:
   - {fileID: 2725472228539335403, guid: d095996193d2e2a4bb3d9c6d37e9ffea, type: 3}
-  - {fileID: 7837672408942285820, guid: e250d7437eb28444bb1abc8b63e29cec, type: 3}
+  - {fileID: 7837672408942285820, guid: fcd23a1577814f44bafffb76112cfebb, type: 3}
   - {fileID: 6569956482653697982, guid: 363912c1d2d000f47b8c2994ca487da3, type: 3}
   - {fileID: 1269123446276032416, guid: 3056f39930558784b825d4ff66b33b34, type: 3}
   - {fileID: 2151090561729008723, guid: 732c346ea5a13414c86977d2a6371fa2, type: 3}
@@ -5622,7 +5622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499162035}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalPosition: {x: -2.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1487954822}
@@ -8885,7 +8885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 2
   _playerStartPosition: {x: 0, y: 0, z: 0}
-  _textHeath: {fileID: 0}
+  _textHeath: {fileID: 631343412}
 --- !u!1001 &720996231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15298,10 +15298,10 @@ MonoBehaviour:
   - {fileID: 1998181432}
   - {fileID: 221889710}
   _spawnTimer: 7
-  _maxEnemysInMoment: 0
-  _remainingEnemys: 0
+  _maxEnemysInMoment: 5
+  _remainingEnemys: 10
   _enemys: []
-  _remainingEnemysText: {fileID: 0}
+  _remainingEnemysText: {fileID: 1687280072}
 --- !u!1001 &1161482809
 PrefabInstance:
   m_ObjectHideFlags: 0
