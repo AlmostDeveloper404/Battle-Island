@@ -9477,7 +9477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 2
   _playerStartPosition: {x: 0, y: 0, z: 0}
-  _displayer: {fileID: 0}
+  _displayer: {fileID: 1882640676}
 --- !u!1001 &720996231
 PrefabInstance:
   m_ObjectHideFlags: 0
