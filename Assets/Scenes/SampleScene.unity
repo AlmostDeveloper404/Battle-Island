@@ -8885,7 +8885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 2
   _playerStartPosition: {x: 0, y: 0, z: 0}
-  _textHeath: {fileID: 631343412}
+  _displayer: {fileID: 1882640676}
 --- !u!1001 &720996231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26195,6 +26195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882640674}
   - component: {fileID: 1882640675}
+  - component: {fileID: 1882640676}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -26229,6 +26230,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemySpawn: {fileID: 1155454181}
+--- !u!114 &1882640676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882640673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb43fd86cc2f984ba7365c22a659852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerHealth: {fileID: 719272410}
+  _textHealth: {fileID: 631343412}
 --- !u!1001 &1883604190
 PrefabInstance:
   m_ObjectHideFlags: 0

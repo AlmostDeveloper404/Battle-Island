@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,14 +8,13 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private Vector3 _playerStartPosition;
 
-    [SerializeField] private Text _textHeath;
+    [SerializeField] private Displayer _displayer;
 
     private bool _invulnerable = false;
 
     void Start() 
     {
         _playerStartPosition = transform.position;
-        DisplayHealth();
     }
 
     public void TakeDamage()
@@ -32,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
                 Destroy(gameObject);
             }
             _health--;
-            DisplayHealth();
+            _displayer.DisplayHealth();
             StartInvulnerable(3);
         }
     }
@@ -51,11 +49,11 @@ public class PlayerHealth : MonoBehaviour
     public void AddHealth()
     {
         _health++;
-        DisplayHealth();
+        _displayer.DisplayHealth();
     }
 
-    void DisplayHealth()
+    public int GetHealth()
     {
-        _textHeath.text = $"{_health}";
+        return _health;
     }
 }
