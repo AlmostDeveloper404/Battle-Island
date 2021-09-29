@@ -1406,7 +1406,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 
 --- !u!222 &297982324
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1743,7 +1743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _boostPrefabs:
   - {fileID: 2725472228539335403, guid: d095996193d2e2a4bb3d9c6d37e9ffea, type: 3}
-  - {fileID: 7837672408942285820, guid: e250d7437eb28444bb1abc8b63e29cec, type: 3}
+  - {fileID: 7837672408942285820, guid: fcd23a1577814f44bafffb76112cfebb, type: 3}
   - {fileID: 6569956482653697982, guid: 363912c1d2d000f47b8c2994ca487da3, type: 3}
   - {fileID: 1269123446276032416, guid: 3056f39930558784b825d4ff66b33b34, type: 3}
   - {fileID: 2151090561729008723, guid: 732c346ea5a13414c86977d2a6371fa2, type: 3}
@@ -3481,6 +3481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 2
   _playerStartPosition: {x: 0, y: 0, z: 0}
+  _textHeath: {fileID: 297982323}
 --- !u!4 &721919987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6584576063886815386, guid: 1cac6f90625ee6642a42a7d1e487103c, type: 3}
@@ -5432,8 +5433,10 @@ MonoBehaviour:
   - {fileID: 1998181432}
   - {fileID: 221889710}
   _spawnTimer: 7
-  _maxEnemys: 5
+  _maxEnemysInMoment: 5
+  _remainingEnemys: 10
   _enemys: []
+  _remainingEnemysText: {fileID: 1856424251}
 --- !u!4 &1163452356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6584576063886815386, guid: 1cac6f90625ee6642a42a7d1e487103c, type: 3}
@@ -9731,7 +9734,7 @@ GameObject:
   - component: {fileID: 1856424252}
   - component: {fileID: 1856424251}
   m_Layer: 5
-  m_Name: LevelNumber
+  m_Name: EnemyNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9789,7 +9792,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 
 --- !u!222 &1856424252
 CanvasRenderer:
   m_ObjectHideFlags: 0
