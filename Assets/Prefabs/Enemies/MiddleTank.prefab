@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 1488039728743083109}
   - component: {fileID: 9021006023381293497}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: MiddleTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
