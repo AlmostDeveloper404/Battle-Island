@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private Displayer _displayer;
 
+    [SerializeField] private GameObject _shield;
+
     private bool _invulnerable = false;
 
     void Start() 
@@ -38,12 +40,14 @@ public class PlayerHealth : MonoBehaviour
 
     public void StartInvulnerable(float time)
     {
+        _shield.SetActive(true);
         _invulnerable = true;
         Invoke("StopInvulnerable", time);
     }
 
     void StopInvulnerable()
     {
+        _shield.SetActive(false);
         _invulnerable = false;
     }
 
