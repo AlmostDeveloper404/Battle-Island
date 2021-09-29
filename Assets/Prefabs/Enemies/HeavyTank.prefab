@@ -104,9 +104,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4368387038341596929}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.542856, y: 1.2542855, z: 54.38286}
-  m_LocalScale: {x: 1.4285715, y: 1.4285715, z: 1.4285715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.51, z: 3.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5720191526863956999}
   m_RootOrder: 2
@@ -133,6 +133,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5720191526863956999}
+  - component: {fileID: -8984749346196916975}
+  - component: {fileID: 7499376817605708191}
+  - component: {fileID: 1845625454142940148}
+  - component: {fileID: -2546905953313285786}
+  - component: {fileID: -6633662285174724297}
   m_Layer: 0
   m_Name: HeavyTank
   m_TagString: Untagged
@@ -157,6 +162,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &-8984749346196916975
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720191526863957016}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &7499376817605708191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720191526863957016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 386fa44011d86d54a98b3a70b1ef84e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 1
+--- !u!114 &1845625454142940148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720191526863957016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4b6eedb4f05f142a771fd4f7ef3500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomDirection: 0
+  Speed: 10
+  Direction: 0
+  TimeToChangeDirection: 1
+--- !u!114 &-2546905953313285786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720191526863957016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1966cf8a05b304da4d583ee355e680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToShoot: 0.5
+  timer: 0
+  BulletSpeed: 100
+  Preb: {fileID: 2673632978114147163, guid: 2b16123eff392a1408ea4e4741edc109, type: 3}
+  FirePoint: {fileID: 1888712737894759842}
+--- !u!114 &-6633662285174724297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720191526863957016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af6dc71cbb7f4b4e99fba6e4db265fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyHealth: {fileID: 7499376817605708191}
 --- !u!1001 &5720191527621572906
 PrefabInstance:
   m_ObjectHideFlags: 0
