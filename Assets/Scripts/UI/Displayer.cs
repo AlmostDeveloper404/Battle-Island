@@ -10,13 +10,5 @@ public class Displayer : MonoBehaviour
     
     [SerializeField] private Text _textHealth;
 
-    void Start()
-    {
-        DisplayHealth();
-    }
     
-    public void DisplayHealth()
-    {
-        _textHealth.text = $"{_playerHealth.GetHealth()}";
-    }
 }
