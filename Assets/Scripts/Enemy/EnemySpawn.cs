@@ -5,6 +5,8 @@ public class EnemySpawn : MonoBehaviour
 {
     EnemyManager enemyManager;
 
+    public IconsDisplayer iconsDisplayer;
+
     public List<Transform> enemiesToSpawn;
 
     private Transform[] spawnPositions;
@@ -26,7 +28,9 @@ public class EnemySpawn : MonoBehaviour
 
     private void Start()
     {
+
         _timer = TimeToSpawn;
+        iconsDisplayer.UpdateIcon(enemiesToSpawn.Count);
         Spawn();
     }
 
@@ -43,6 +47,7 @@ public class EnemySpawn : MonoBehaviour
     {
         if (enemiesToSpawn.Count==0)
         {
+            iconsDisplayer.UpdateIcon(enemiesToSpawn.Count);
             enabled = false;
             return;
         }
@@ -51,9 +56,8 @@ public class EnemySpawn : MonoBehaviour
         spawnPositions[Random.Range(0,spawnPositions.Length)].position,
         Quaternion.identity
                 );
-
-
         RemoveFromList();
+        iconsDisplayer.UpdateIcon(enemiesToSpawn.Count);
         enemyManager.AddToList(newSpawnedTank);
     }
 
