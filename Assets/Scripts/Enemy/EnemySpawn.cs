@@ -11,6 +11,8 @@ public class EnemySpawn : MonoBehaviour
 
     private Transform[] spawnPositions;
 
+    public AudioSource SpawnSound;
+
     public float TimeToSpawn;
     [SerializeField]float _timer;
 
@@ -51,6 +53,7 @@ public class EnemySpawn : MonoBehaviour
             enabled = false;
             return;
         }
+        SpawnSound.Play();
         Transform newSpawnedTank = Instantiate(
         enemiesToSpawn[0],
         spawnPositions[Random.Range(0,spawnPositions.Length)].position,

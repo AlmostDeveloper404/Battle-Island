@@ -6,6 +6,7 @@ public class Blocks : MonoBehaviour
 {
     public GameObject NormalWall;
     public GameObject DestroyedBlock;
+    public AudioSource PlaySound;
 
     BoxCollider boxCollider;
 
@@ -23,6 +24,7 @@ public class Blocks : MonoBehaviour
 
     void SwitchModels()
     {
+        PlaySound.Play();
         boxCollider.enabled = false;
         DestroyedBlock.SetActive(true);
         Destroy(NormalWall);
