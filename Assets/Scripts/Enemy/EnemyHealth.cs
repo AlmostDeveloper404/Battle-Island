@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int _health = 1;
+    [SerializeField] private GameObject _tank, _explosionPrefab, _destroyPrint;
 
     private EnemySpawn _enemySpawn;
 
@@ -24,6 +25,8 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
+        Instantiate(_explosionPrefab, transform.position, transform.rotation);
+        Instantiate(_destroyPrint, transform.position, _destroyPrint.transform.rotation);
         Destroy(gameObject);
     }
     void OnDestroy()
