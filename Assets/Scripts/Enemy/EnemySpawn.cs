@@ -1,67 +1,66 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemySpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _enemyPrefabs;
+    EnemyManager enemyManager;
 
-    [SerializeField] private Transform[] _spawnTransforms;
+    public List<Transform> enemiesToSpawn;
 
-    [SerializeField] private float _spawnTimer, _maxEnemysInMoment, _remainingEnemys;
+    private Transform[] spawnPositions;
 
-    [SerializeField] private List<GameObject> _enemys = new List<GameObject>();
+    public float TimeToSpawn;
+    [SerializeField]float _timer;
 
-    [SerializeField] private Text _remainingEnemysText;
-
-    private float _timer;
-
-    void Start()
+    private void Awake()
     {
-        SpawnEnemy();
-        DisplayRemainingEnemys();
+        spawnPositions = new Transform[transform.childCount];
+        for (int i = 0; i < spawnPositions.Length; i++)
+        {
+            spawnPositions[i] = transform.GetChild(i);
+        }
+
+
+        enemyManager = GetComponent<EnemyManager>();
     }
 
-    void Update()
+    private void Start()
     {
-        if(_enemys.Count < _maxEnemysInMoment && _remainingEnemys > 0)
+        _timer = TimeToSpawn;
+        Spawn();
+    }
+
+    private void Update()
+    {
+        _timer -= Time.deltaTime;
+        if (_timer<0)
         {
-            _timer += Time.deltaTime;
-
-            if(_timer >= _spawnTimer)
-            {
-                _timer = 0;
-
-                SpawnEnemy();
-            }
+            _timer = TimeToSpawn;
+            Spawn();
         }
     }
-
-    void SpawnEnemy()
+    public void Spawn()
     {
-        int randomEnemy = Random.Range(0,4);
-        Vector3 randomPosition = _spawnTransforms[Random.Range(0, 3)].position;
-        Vector3 enemyPosition = new Vector3(randomPosition.x, _enemyPrefabs[randomEnemy].transform.position.y, randomPosition.z);
+        if (enemiesToSpawn.Count==0)
+        {
+            enabled = false;
+            return;
+        }
+        Transform newSpawnedTank = Instantiate(
+        enemiesToSpawn[0],
+        spawnPositions[Random.Range(0,spawnPositions.Length)].position,
+        Quaternion.identity
+                );
 
-        GameObject newEnemy = Instantiate(_enemyPrefabs[randomEnemy], enemyPosition, _spawnTransforms[0].rotation, transform);
-        _enemys.Add(newEnemy);
-        _remainingEnemys --;
-        DisplayRemainingEnemys();
+
+        RemoveFromList();
+        enemyManager.AddToList(newSpawnedTank);
     }
 
-    public void RemoveFromEnemys(GameObject enemy)
+    public void RemoveFromList()
     {
-        _enemys.Remove(enemy);
+        enemiesToSpawn.RemoveAt(0);
     }
 
-    public List<GameObject> GetEnemys()
-    {
-        return _enemys;
-    }
-
-    void DisplayRemainingEnemys()
-    {
-        _remainingEnemysText.text = $"{_remainingEnemys}";
-    }
+    
 }

@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TimeBoost : MonoBehaviour
 {
-    private GameManager _gameManager;
-    private BoostSpawn _boostSpawn;
+    EnemyManager enemyManager;
 
-    void Awake()
+    private void Start()
     {
-        _gameManager = FindObjectOfType<GameManager>();
-        _boostSpawn = FindObjectOfType<BoostSpawn>();
+        enemyManager = EnemyManager.instance;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,10 +15,8 @@ public class TimeBoost : MonoBehaviour
         {
             if(other.attachedRigidbody.GetComponent<PlayerHealth>())
             {
-                _gameManager.StopingTimeEnemys();
-                _gameManager.ResumeTimeEnemysInInvoke();
-                _boostSpawn.DeductBoostInGame();
-                Destroy(transform.parent.gameObject);
+                enemyManager.StopEnemyTime();
+                Destroy(gameObject);
             }
         }
     }

@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 9147556192392934612}
   - component: {fileID: 9147556192392934614}
   - component: {fileID: 1488039728743083109}
-  - component: {fileID: 9021006023381293497}
   m_Layer: 6
   m_Name: MiddleTank
   m_TagString: Untagged
@@ -111,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RandomDirection: 0
-  Speed: 10
+  Speed: 6
   Direction: 0
   TimeToChangeDirection: 1
 --- !u!114 &9147556192392934614
@@ -126,9 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1966cf8a05b304da4d583ee355e680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToShoot: 0.5
+  TimeToShoot: 0.7
   timer: 0
-  BulletSpeed: 100
+  BulletSpeed: 70
   Preb: {fileID: 2673632978114147163, guid: 2b16123eff392a1408ea4e4741edc109, type: 3}
   FirePoint: {fileID: 9147556192910981128}
 --- !u!114 &1488039728743083109
@@ -147,19 +146,6 @@ MonoBehaviour:
   _tank: {fileID: 278749390}
   _explosionPrefab: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
   _destroyPrint: {fileID: 4318985632108313997, guid: b02cd68e61c02fa46b87d0c3e81584c0, type: 3}
---- !u!114 &9021006023381293497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9147556192392934610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9af6dc71cbb7f4b4e99fba6e4db265fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyHealth: {fileID: 1488039728743083109}
 --- !u!1 &9147556192910981129
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3422779971442485783}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.48, z: 1.93}
+  m_LocalPosition: {x: 0, y: 1.859, z: 1.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4499980174572633193}
@@ -42,7 +42,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 6.595655, y: 4.999175, z: 3.7830462}
-  m_Center: {x: 0.5238085, y: 1.2962487, z: 0.046960115}
+  m_Center: {x: 0.5238085, y: 1.84, z: 0.046960115}
 --- !u!1 &4499980174572633192
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 4842670103043529115}
   - component: {fileID: -5479751896625368140}
   - component: {fileID: 4788833818692251772}
-  - component: {fileID: 37563818637293812}
   m_Layer: 6
   m_Name: LightTank
   m_TagString: Untagged
@@ -140,24 +139,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1966cf8a05b304da4d583ee355e680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToShoot: 0.5
+  TimeToShoot: 0.4
   timer: 0
-  BulletSpeed: 100
+  BulletSpeed: 85
   Preb: {fileID: 2673632978114147163, guid: 2b16123eff392a1408ea4e4741edc109, type: 3}
   FirePoint: {fileID: 3852888555936342728}
---- !u!114 &37563818637293812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4499980174572633192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9af6dc71cbb7f4b4e99fba6e4db265fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyHealth: {fileID: 4842670103043529115}
 --- !u!1001 &4499980174496011537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -187,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a7ad458ee094814c98f098972eec12d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.379
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a7ad458ee094814c98f098972eec12d, type: 3}
       propertyPath: m_LocalPosition.z

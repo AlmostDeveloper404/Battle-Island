@@ -5,12 +5,10 @@ using UnityEngine;
 public class ShovelBoost : MonoBehaviour
 {
     private BaseBlocks _baseBlocks;
-    private BoostSpawn _boostSpawn;
 
     void Awake() 
     {
         _baseBlocks = FindObjectOfType<BaseBlocks>();
-        _boostSpawn = FindObjectOfType<BoostSpawn>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,8 +18,7 @@ public class ShovelBoost : MonoBehaviour
             if(other.attachedRigidbody.GetComponent<PlayerHealth>())
             {
                 _baseBlocks.GetConcreteBlock();
-                _boostSpawn.DeductBoostInGame();
-                Destroy(transform.parent.gameObject);
+                Destroy(gameObject);
             }
         }
     }

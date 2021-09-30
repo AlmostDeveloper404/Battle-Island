@@ -10,9 +10,12 @@ public class EnemyMoving : MonoBehaviour
         left
     }
 
+    EnemyShooting enemyShooting;
+
     public float RandomDirection;
     Rigidbody _rigidBody;
     public float Speed=10f;
+    float startSpeed;
 
     Vector3 directionToMove;
 
@@ -24,7 +27,13 @@ public class EnemyMoving : MonoBehaviour
 
     private void Awake()
     {
+        enemyShooting = GetComponent<EnemyShooting>();
         _rigidBody = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        startSpeed = Speed;
     }
 
     private void Update()
@@ -100,7 +109,21 @@ public class EnemyMoving : MonoBehaviour
                 break;
 
         }
+    }
 
+    public void FreezeEnemy()
+    {
+        _rigidBody.velocity = Vector3.zero ;
+        Speed = 0;
+        enemyShooting.enabled = false;
+        enabled = false;
+        
+    }
 
+    public void Unfreeze()
+    {
+        Speed=startSpeed;
+        enemyShooting.enabled = true;
+        enabled = true;
     }
 }

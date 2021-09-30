@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4368387038341596929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.51, z: 3.41}
+  m_LocalPosition: {x: 0, y: 2.5814285, z: 3.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5720191526863956999}
@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 7499376817605708191}
   - component: {fileID: 1845625454142940148}
   - component: {fileID: -2546905953313285786}
-  - component: {fileID: -6633662285174724297}
   m_Layer: 6
   m_Name: HeavyTank
   m_TagString: Untagged
@@ -108,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 386fa44011d86d54a98b3a70b1ef84e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 1
+  _health: 3
   _tank: {fileID: 4873838396148548731}
   _explosionPrefab: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
   _destroyPrint: {fileID: 4318985632108313997, guid: b02cd68e61c02fa46b87d0c3e81584c0, type: 3}
@@ -125,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RandomDirection: 0
-  Speed: 10
+  Speed: 5
   Direction: 0
   TimeToChangeDirection: 1
 --- !u!114 &-2546905953313285786
@@ -140,24 +139,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1966cf8a05b304da4d583ee355e680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToShoot: 0.5
+  TimeToShoot: 0.8
   timer: 0
-  BulletSpeed: 100
+  BulletSpeed: 60
   Preb: {fileID: 2673632978114147163, guid: 2b16123eff392a1408ea4e4741edc109, type: 3}
   FirePoint: {fileID: 1888712737894759842}
---- !u!114 &-6633662285174724297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5720191526863957016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9af6dc71cbb7f4b4e99fba6e4db265fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyHealth: {fileID: 7499376817605708191}
 --- !u!1001 &5720191527621572906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -191,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b30d7745a6ba0634d8cfadd455885891, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.0714285
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b30d7745a6ba0634d8cfadd455885891, type: 3}
       propertyPath: m_LocalPosition.z

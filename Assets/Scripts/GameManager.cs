@@ -1,40 +1,17 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private EnemySpawn _enemySpawn;
-
-    private List<GameObject> _enemys = new List<GameObject>();
-
-    public void StopingTimeEnemys()
+    public void Win()
     {
-       _enemys = _enemySpawn.GetEnemys();
-
-       foreach(GameObject enemy in _enemySpawn.GetEnemys())
-       {
-           enemy.GetComponent<EnemyMoving>().enabled = false;
-           enemy.GetComponent<EnemyShooting>().enabled = false;
-           enemy.GetComponent<Rigidbody>().velocity = Vector3.zero;
-       }
-
-       _enemySpawn.enabled = false;
+        Debug.Log("Win");
     }
 
-    public void ResumeTimeEnemysInInvoke()
+    public void Lose()
     {
-        Invoke("ResumeTimeEnemys", 5);
+        Debug.Log("Lose");
     }
 
-    void ResumeTimeEnemys()
-    {
-        foreach(GameObject enemy in _enemySpawn.GetEnemys())
-        {
-            enemy.GetComponent<EnemyMoving>().enabled = true;
-            enemy.GetComponent<EnemyShooting>().enabled = true;
-        }
-
-        _enemySpawn.enabled = true;
-    }
+    
 }

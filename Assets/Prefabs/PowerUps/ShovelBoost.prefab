@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2151090561729008721}
+  - component: {fileID: 1355372129588957860}
+  - component: {fileID: 2043859894}
   m_Layer: 0
   m_Name: ShovelBoost
   m_TagString: Untagged
@@ -32,6 +34,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1355372129588957860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151090561729008723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53879141406a17498a70cfaa4ff5e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &2043859894
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151090561729008723}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2151090563255563661
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,8 +68,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2151090563255563650}
-  - component: {fileID: 2151090563255563651}
-  - component: {fileID: 2151090563255563658}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -64,32 +89,6 @@ Transform:
   m_Father: {fileID: 2151090561729008721}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2151090563255563651
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2151090563255563661}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.6822296
-  m_Height: 3.8682165
-  m_Direction: 2
-  m_Center: {x: -0.004767835, y: 0, z: 0.6438794}
---- !u!114 &2151090563255563658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2151090563255563661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f53879141406a17498a70cfaa4ff5e6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2750360969457524910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103,11 +102,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8931ae939988094580241e1e2bac0ce, type: 3}
       propertyPath: m_LocalScale.x
-      value: 150
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c8931ae939988094580241e1e2bac0ce, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8931ae939988094580241e1e2bac0ce, type: 3}
       propertyPath: m_LocalScale.z
-      value: 100
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8931ae939988094580241e1e2bac0ce, type: 3}
       propertyPath: m_LocalPosition.x
