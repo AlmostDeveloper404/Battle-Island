@@ -7,11 +7,14 @@ public class BoostSpawn : MonoBehaviour
     public List<Transform> boosts=new List<Transform>();
     private Transform[] spawnPositions;
 
+    AudioSource spawnSource;
+
     float _timer;
     public float TimeToSpawnBoost;
 
     private void Awake()
     {
+        spawnSource = GetComponent<AudioSource>();
         spawnPositions = new Transform[transform.childCount];
         for (int i = 0; i < spawnPositions.Length; i++)
         {
@@ -41,6 +44,7 @@ public class BoostSpawn : MonoBehaviour
             enabled = false;
             return;
         }
+        spawnSource.Play();
         Transform newBoost = Instantiate(boosts[0], spawnPositions[Random.Range(0,spawnPositions.Length)].position,Quaternion.identity);
         RemoveBoost();
 

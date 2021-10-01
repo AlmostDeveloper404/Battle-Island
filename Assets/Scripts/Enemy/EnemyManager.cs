@@ -18,11 +18,17 @@ public class EnemyManager : MonoBehaviour
     }
 
     #endregion
-
+    GameManager gameManager;
+    EnemySpawn enemySpawn;
     [SerializeField]private List<Transform> enemiesSpawned=new List<Transform>();
 
     public float FreezingTime=3f;
-    
+
+    private void Start()
+    {
+        enemySpawn = GetComponent<EnemySpawn>();
+        gameManager = GameManager.instance;
+    }
     public void AddToList(Transform spawnedEnemy)
     {
         enemiesSpawned.Add(spawnedEnemy);
@@ -30,9 +36,17 @@ public class EnemyManager : MonoBehaviour
     public void RemoveFromList(Transform destroyedEnemy)
     {
         enemiesSpawned.Remove(destroyedEnemy);
+        if (enemiesSpawned.Count==0 && enemySpawn.enemiesToSpawn.Count==0)
+        {
+            gameManager.Win();
+        }
     }
     public void AllDie()
     {
+        for (int i = 0; i < enemiesSpawned.Count; i++)
+        {
+            enemiesSpawned[i].GetComponent<EnemyHealth>().TakeDamage(100);
+        }
         enemiesSpawned.Clear();
     }
 

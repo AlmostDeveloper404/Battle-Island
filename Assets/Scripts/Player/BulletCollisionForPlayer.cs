@@ -3,8 +3,12 @@ using UnityEngine;
 public class BulletCollisionForPlayer : MonoBehaviour
 {
     public int Damage;
+    EnemyManager enemyManager;
+    private void Start()
+    {
+        enemyManager = EnemyManager.instance;
+    }
 
-    
     private void OnTriggerEnter(Collider other)
     {
         
@@ -12,8 +16,8 @@ public class BulletCollisionForPlayer : MonoBehaviour
         
         if (enemyHealth)
         {
+            enemyManager.RemoveFromList(enemyHealth.transform);
             enemyHealth.TakeDamage(Damage);
-            DestroyBullet();
         }
         DestroyBullet();
     }

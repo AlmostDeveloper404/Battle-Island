@@ -2,16 +2,23 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int _health = 3;
+    [SerializeField]private int _health = 3;
 
-    [SerializeField] private Vector3 _playerStartPosition;
+    private Vector3 _playerStartPosition;
 
     [SerializeField] private GameObject _shield;
 
     private bool _invulnerable = false;
 
+    GameManager gameManager;
+
+    UIManager uiManager;
+
     void Start() 
     {
+        gameManager = GameManager.instance;
+        uiManager = UIManager.instance;
+        uiManager.UpdateHealth(_health);
         _playerStartPosition = transform.position;
     }
 
@@ -28,6 +35,11 @@ public class PlayerHealth : MonoBehaviour
                 Destroy(gameObject);
             }
             _health--;
+            uiManager.UpdateHealth(_health);
+            if (_health==0)
+            {
+                gameManager.Lose();
+            }
             StartInvulnerable(3);
         }
     }
@@ -48,6 +60,7 @@ public class PlayerHealth : MonoBehaviour
     public void AddHealth()
     {
         _health++;
+        uiManager.UpdateHealth(_health);
     }
 
     public int GetHealth()

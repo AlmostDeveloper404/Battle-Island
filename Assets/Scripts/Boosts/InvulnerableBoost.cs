@@ -5,6 +5,8 @@ public class InvulnerableBoost : MonoBehaviour
     AudioManager audioManager;
     public AudioSource Invalnerable;
 
+    public float invulnerableTime;
+
     private void Start()
     {
         audioManager = AudioManager.instance;
@@ -18,7 +20,7 @@ public class InvulnerableBoost : MonoBehaviour
             if(playerHealth)
             {
                 audioManager.PlaySound(Invalnerable);
-                playerHealth.StartInvulnerable(5);
+                playerHealth.StartInvulnerable(invulnerableTime);
                 Destroy(gameObject);
             }
         }

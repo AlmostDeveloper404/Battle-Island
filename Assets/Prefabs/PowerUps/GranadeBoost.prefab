@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 1619540516142619046}
   - component: {fileID: 4942010428085901881}
   - component: {fileID: 1142456903702648452}
+  - component: {fileID: 8781490174290790715}
   m_Layer: 10
   m_Name: GranadeBoost
   m_TagString: Untagged
@@ -408,6 +409,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyEffect: {fileID: 9160544071300276086, guid: 73497754bc41bfa46b5bba050e7f8e44, type: 3}
+--- !u!114 &8781490174290790715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569956482653697982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84095166a0d6337439a003c6dfbef24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6569956482686530719
 PrefabInstance:
   m_ObjectHideFlags: 0

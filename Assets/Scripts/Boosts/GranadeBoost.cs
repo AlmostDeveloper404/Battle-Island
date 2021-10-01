@@ -5,7 +5,6 @@ public class GranadeBoost : MonoBehaviour
     EnemyManager enemyManager;
     AudioManager audioManager;
     public AudioSource GranadePicked;
-
     private void Start()
     {
         audioManager = AudioManager.instance;
@@ -29,6 +28,5 @@ public class GranadeBoost : MonoBehaviour
         audioManager.PlaySound(GranadePicked);
         enemyManager.AllDie();
         Destroy(gameObject);
-        
     }
 }

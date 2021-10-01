@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 4722849906904696526}
   - component: {fileID: 4259134869874575171}
   - component: {fileID: 7289148072155430595}
+  - component: {fileID: 5591897900517032262}
   m_Layer: 10
   m_Name: InvulnerableBoost
   m_TagString: Untagged
@@ -130,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invalnerable: {fileID: 4259134869874575171}
+  invulnerableTime: 5
 --- !u!135 &3711519344447563478
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -265,3 +267,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyEffect: {fileID: 9160544071300276086, guid: 73497754bc41bfa46b5bba050e7f8e44, type: 3}
+--- !u!114 &5591897900517032262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5695750604166145364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84095166a0d6337439a003c6dfbef24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
