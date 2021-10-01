@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: -5030771626884189050}
   - component: {fileID: 4661506483012916030}
   - component: {fileID: 912914341}
+  - component: {fileID: -7477331146880263540}
   m_Layer: 10
   m_Name: HealthBoost
   m_TagString: Untagged
@@ -298,6 +299,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationVector: {x: 0, y: 300, z: 0}
+--- !u!114 &-7477331146880263540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2725472228539335403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3256a5e792867428442cb09ebeea27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyEffect: {fileID: 9160544071300276086, guid: 73497754bc41bfa46b5bba050e7f8e44, type: 3}
 --- !u!1001 &124404753
 PrefabInstance:
   m_ObjectHideFlags: 0

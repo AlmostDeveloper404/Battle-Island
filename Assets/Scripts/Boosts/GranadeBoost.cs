@@ -19,10 +19,16 @@ public class GranadeBoost : MonoBehaviour
         {
             if (other.attachedRigidbody.GetComponent<PlayerHealth>())
             {
-                audioManager.PlaySound(GranadePicked);
-                enemyManager.AllDie();
-                Destroy(gameObject);
+                PickUp();              
             }
         }
+    }
+
+    void PickUp()
+    {
+        audioManager.PlaySound(GranadePicked);
+        enemyManager.AllDie();
+        Destroy(gameObject);
+        
     }
 }

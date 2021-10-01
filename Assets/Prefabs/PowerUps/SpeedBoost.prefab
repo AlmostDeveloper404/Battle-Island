@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 5585958651946549344}
   - component: {fileID: 394516767310328239}
   - component: {fileID: 1715535455}
+  - component: {fileID: 1661143576433637361}
   m_Layer: 10
   m_Name: SpeedBoost
   m_TagString: Untagged
@@ -266,6 +267,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationVector: {x: 0, y: 300, z: 0}
+--- !u!114 &1661143576433637361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269123446276032416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3256a5e792867428442cb09ebeea27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyEffect: {fileID: 9160544071300276086, guid: 73497754bc41bfa46b5bba050e7f8e44, type: 3}
 --- !u!1001 &4994902951301554184
 PrefabInstance:
   m_ObjectHideFlags: 0
