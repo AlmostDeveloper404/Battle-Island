@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 5695750604166145366}
   - component: {fileID: 1015822160555977507}
   - component: {fileID: 3711519344447563478}
+  - component: {fileID: 4722849906904696526}
   m_Layer: 0
   m_Name: InvulnerableBoost
   m_TagString: Untagged
@@ -139,3 +140,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4722849906904696526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5695750604166145364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0369133e3e89b55428caf3cb4cc96469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _time: 8

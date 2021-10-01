@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2151090561729008721}
   - component: {fileID: 1355372129588957860}
   - component: {fileID: 2043859894}
+  - component: {fileID: 5450868673663770513}
   m_Layer: 0
   m_Name: ShovelBoost
   m_TagString: Untagged
@@ -59,6 +60,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5450868673663770513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151090561729008723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0369133e3e89b55428caf3cb4cc96469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _time: 8
 --- !u!1 &2151090563255563661
 GameObject:
   m_ObjectHideFlags: 0

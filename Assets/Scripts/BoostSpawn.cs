@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class BoostSpawn : MonoBehaviour
@@ -35,17 +36,33 @@ public class BoostSpawn : MonoBehaviour
 
     void SpawnBoost()
     {
-        if (boosts.Count==0)
+        if (boosts.Count == 0)
         {
             enabled = false;
             return;
         }
-        Instantiate(boosts[0], spawnPositions[Random.Range(0,spawnPositions.Length)].position,Quaternion.identity);
+        Transform newBoost = Instantiate(boosts[0], spawnPositions[Random.Range(0,spawnPositions.Length)].position,Quaternion.identity);
         RemoveBoost();
+
+        Renderer renderer = newBoost.GetComponentInChildren<Renderer>();
+        Color color = renderer.material.color;
+        StartCoroutine(StartTimeToDelete(newBoost, renderer, color));
     }
 
     public void RemoveBoost()
     {
         boosts.RemoveAt(0);
+    }
+
+    public IEnumerator StartTimeToDelete(Transform boost, Renderer boostRenderer, Color boostColor)
+    {
+        for (float t = 0; t < 10; t += Time.deltaTime)
+        {
+            if(t >= 5 && boostRenderer != null)
+            {
+                boostRenderer.material.SetColor("_Color", new Color(boostColor.r, boostColor.g, boostColor.b, Mathf.Sin(t * 30) * 0.5f + 0.5f));
+            }
+            yield return null;
+        }
     }
 }

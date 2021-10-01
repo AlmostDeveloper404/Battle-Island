@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 6569956482653697981}
   - component: {fileID: 5002184944804396772}
   - component: {fileID: 732467462}
+  - component: {fileID: 1791109308348224921}
   m_Layer: 0
   m_Name: GranadeBoost
   m_TagString: Untagged
@@ -187,6 +188,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.0616298
   m_Center: {x: -0.15, y: 1, z: 0}
+--- !u!114 &1791109308348224921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569956482653697982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0369133e3e89b55428caf3cb4cc96469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _time: 8
 --- !u!1 &6569956483314754583
 GameObject:
   m_ObjectHideFlags: 0
