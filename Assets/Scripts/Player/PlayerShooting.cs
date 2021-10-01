@@ -24,7 +24,7 @@ public class PlayerShooting : MonoBehaviour
     void Shoot()
     {
         _timer = 0f;
-        GameObject shootEffect = Instantiate(ShootEffect,_firePoint.position,Quaternion.identity);
+        GameObject shootEffect = Instantiate(ShootEffect,_firePoint.position,_firePoint.rotation);
         Destroy(shootEffect,2f);
         GameObject newBullet = Instantiate(_bulletPrefab, _firePoint.position, _firePoint.rotation);
         newBullet.GetComponent<Rigidbody>().velocity = transform.forward * _bulletSpeed;

@@ -256,6 +256,7 @@ MonoBehaviour:
   TimeToShoot: 0.7
   timer: 0
   ShotSound: {fileID: 2466487396055083846}
+  ShotEffect: {fileID: 260237277819048391, guid: ab4de36d6e4ea9649ac6ffe050c43fd1, type: 3}
   BulletSpeed: 70
   Preb: {fileID: 2673632978114147163, guid: 2b16123eff392a1408ea4e4741edc109, type: 3}
   FirePoint: {fileID: 9147556192910981128}
