@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletCollisionForEnemy : MonoBehaviour
@@ -11,7 +9,6 @@ public class BulletCollisionForEnemy : MonoBehaviour
         if (playerHealth)
         {
             playerHealth.TakeDamage();
-            DestroyBullet();
         }
         DestroyBullet();
     }

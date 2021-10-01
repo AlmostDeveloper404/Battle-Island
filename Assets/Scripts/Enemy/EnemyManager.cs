@@ -31,7 +31,7 @@ public class EnemyManager : MonoBehaviour
     {
         enemiesSpawned.Remove(destroyedEnemy);
     }
-    public void RemoveAll()
+    public void AllDie()
     {
         enemiesSpawned.Clear();
     }

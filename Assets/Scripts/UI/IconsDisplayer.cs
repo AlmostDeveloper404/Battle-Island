@@ -15,7 +15,6 @@ public class IconsDisplayer : MonoBehaviour
 
     public void UpdateIcon(int remainingEnemies)
     {
-        Debug.Log("Yep");
         for (int i = 0; i < icons.Length; i++)
         {
             icons[i].SetActive(i<remainingEnemies);

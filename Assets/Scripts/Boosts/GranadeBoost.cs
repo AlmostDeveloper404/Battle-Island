@@ -3,9 +3,12 @@ using UnityEngine;
 public class GranadeBoost : MonoBehaviour
 {
     EnemyManager enemyManager;
+    AudioManager audioManager;
+    public AudioSource GranadePicked;
 
     private void Start()
     {
+        audioManager = AudioManager.instance;
         enemyManager = EnemyManager.instance;
     }
 
@@ -16,7 +19,8 @@ public class GranadeBoost : MonoBehaviour
         {
             if (other.attachedRigidbody.GetComponent<PlayerHealth>())
             {
-                enemyManager.RemoveAll();
+                audioManager.PlaySound(GranadePicked);
+                enemyManager.AllDie();
                 Destroy(gameObject);
             }
         }

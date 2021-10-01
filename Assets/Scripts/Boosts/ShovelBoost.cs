@@ -1,14 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShovelBoost : MonoBehaviour
 {
     private BaseBlocks _baseBlocks;
+    public AudioSource ShovelSound;
+    AudioManager audioManager;
 
     void Awake() 
     {
         _baseBlocks = FindObjectOfType<BaseBlocks>();
+    }
+
+    private void Start()
+    {
+        audioManager = AudioManager.instance;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -17,6 +22,7 @@ public class ShovelBoost : MonoBehaviour
         {
             if(other.attachedRigidbody.GetComponent<PlayerHealth>())
             {
+                audioManager.PlaySound(ShovelSound);
                 _baseBlocks.GetConcreteBlock();
                 Destroy(gameObject);
             }
