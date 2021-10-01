@@ -4,6 +4,12 @@ public class BulletCollisionForPlayer : MonoBehaviour
 {
     public int Damage;
     EnemyManager enemyManager;
+    SphereCollider sphereCollider;
+
+    private void Awake()
+    {
+        sphereCollider = GetComponentInChildren<SphereCollider>();
+    }
     private void Start()
     {
         enemyManager = EnemyManager.instance;
@@ -11,7 +17,7 @@ public class BulletCollisionForPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        sphereCollider.enabled = false;
         EnemyHealth enemyHealth = other.GetComponentInParent<EnemyHealth>();
         
         if (enemyHealth)
