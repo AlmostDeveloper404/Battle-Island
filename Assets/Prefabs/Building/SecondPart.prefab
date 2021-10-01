@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ce946f3c8203b4395a0b43bc31c2ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NormalWall: {fileID: 7539379875859535873}
   DestroyedBlock: {fileID: 6777353905461684207}
-  CurrentBlocks: {fileID: 7539379875859535873}
   PlaySound: {fileID: 6224310989304018232}
 --- !u!65 &6605753401212363893
 BoxCollider:
