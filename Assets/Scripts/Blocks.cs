@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Blocks : MonoBehaviour
 {
-    public GameObject NormalWall;
     public GameObject DestroyedBlock;
+    public GameObject CurrentBlocks;
     public AudioSource PlaySound;
 
     BoxCollider boxCollider;
@@ -26,8 +24,8 @@ public class Blocks : MonoBehaviour
     {
         PlaySound.Play();
         boxCollider.enabled = false;
+        CurrentBlocks.SetActive(false);
         DestroyedBlock.SetActive(true);
-        Destroy(NormalWall);
         Destroy(gameObject,6f);
     }
 }
