@@ -27,14 +27,10 @@ public class EnemyManager : MonoBehaviour
     {
         enemiesSpawned.Add(spawnedEnemy);
     }
-
     public void RemoveFromList(Transform destroyedEnemy)
     {
         enemiesSpawned.Remove(destroyedEnemy);
     }
-
-    
-
     public void RemoveAll()
     {
         enemiesSpawned.Clear();
