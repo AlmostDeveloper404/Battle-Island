@@ -24,11 +24,14 @@ public class EnemyManager : MonoBehaviour
 
     public float FreezingTime=3f;
 
+
     private void Start()
     {
         enemySpawn = GetComponent<EnemySpawn>();
         gameManager = GameManager.instance;
     }
+
+    
     public void AddToList(Transform spawnedEnemy)
     {
         enemiesSpawned.Add(spawnedEnemy);
@@ -38,8 +41,12 @@ public class EnemyManager : MonoBehaviour
         enemiesSpawned.Remove(destroyedEnemy);
         if (enemiesSpawned.Count==0 && enemySpawn.enemiesToSpawn.Count==0)
         {
-            gameManager.Win();
+            
+             gameManager.Win();
+
+            
         }
+        
     }
     public void AllDie()
     {

@@ -28,8 +28,11 @@ public class BulletCollisionForPlayer : MonoBehaviour
         
         if (enemyHealth)
         {
-            enemyManager.RemoveFromList(enemyHealth.transform);
             enemyHealth.TakeDamage(Damage);
+            if (enemyHealth._health==0)
+            {
+                enemyManager.RemoveFromList(enemyHealth.transform);
+            }
         }
         DestroyBullet();
     }

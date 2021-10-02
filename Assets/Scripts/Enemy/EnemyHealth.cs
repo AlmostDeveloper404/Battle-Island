@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] private int _health = 1;
+    public int _health = 1;
     [SerializeField] private GameObject _explosionPrefab, _destroyPrint;
     [SerializeField] private GameObject _shield;
 
