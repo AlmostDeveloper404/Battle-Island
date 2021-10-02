@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8500,7 +8500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582215199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.1, y: 1.5, z: 11.3}
+  m_LocalPosition: {x: -19.1, y: 1.5, z: 18.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 329257554}
@@ -13623,7 +13623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ff7d55773ea7145a17259829a744dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoostSound: {fileID: 905517173}
 --- !u!82 &905517173
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17479,7 +17478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118434612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.5, y: 1.5, z: 0}
+  m_LocalPosition: {x: -22.4, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 329257554}
@@ -18337,7 +18336,7 @@ MonoBehaviour:
   - {fileID: 9147556192392934615, guid: 37b7c7561d1c3b94c820986ef2ef88f7, type: 3}
   - {fileID: 4499980174572633193, guid: ef83298bb5b697a4f950bfc45751c37b, type: 3}
   SpawnSound: {fileID: 1155454183}
-  TimeToSpawn: 2
+  TimeToSpawn: 10
   _timer: 0
 --- !u!114 &1155454182
 MonoBehaviour:
@@ -24037,7 +24036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406070560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.15, y: 1.5, z: -10.8}
+  m_LocalPosition: {x: -7.5, y: 1.5, z: -4.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 329257554}
