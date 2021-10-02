@@ -141,11 +141,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeToShoot: 0.8
   timer: 0
-  ShotSound: {fileID: 0}
+  ShotSound: {fileID: 729523471016107344}
   ShotEffect: {fileID: 260237277819048391, guid: ab4de36d6e4ea9649ac6ffe050c43fd1, type: 3}
-  BulletSpeed: 60
   Preb: {fileID: 2673632978114147163, guid: 2b16123eff392a1408ea4e4741edc109, type: 3}
   FirePoint: {fileID: 1888712737894759842}
+  BulletSpeed: 60
 --- !u!1 &6518962565386806894
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +187,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 42c9657c92c49ad4da663648da8e219a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c880a92bcbcca1d438030a19a94a1bf0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.443
   m_Pitch: 1

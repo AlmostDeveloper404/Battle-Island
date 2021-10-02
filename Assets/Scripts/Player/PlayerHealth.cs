@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start() 
     {
+        _health = PlayerPrefs.GetInt("Health");
         gameManager = GameManager.instance;
         uiManager = UIManager.instance;
         uiManager.UpdateHealth(_health);
@@ -36,6 +37,7 @@ public class PlayerHealth : MonoBehaviour
             }
             _health--;
             uiManager.UpdateHealth(_health);
+            PlayerPrefs.SetInt("Health",_health);
             if (_health==0)
             {
                 gameManager.Lose();
