@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 201275653}
   - component: {fileID: -5473372499023302631}
   - component: {fileID: -9190324228114496964}
+  - component: {fileID: 3759681060751548310}
   m_Layer: 10
   m_Name: TimeBoost
   m_TagString: Untagged
@@ -294,6 +295,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84095166a0d6337439a003c6dfbef24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3759681060751548310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7837672408942285820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82321a0d4434a4b42bc67504e7d0dc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderers:
+  - {fileID: 1711813855032253369}
 --- !u!1 &7837672409758858749
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,5 +399,10 @@ PrefabInstance:
 --- !u!4 &543450651621187798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ec3fdf404ea35ce4b8f766d31644a8ea, type: 3}
+  m_PrefabInstance: {fileID: 2087225149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1711813855032253369 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: ec3fdf404ea35ce4b8f766d31644a8ea, type: 3}
   m_PrefabInstance: {fileID: 2087225149}
   m_PrefabAsset: {fileID: 0}

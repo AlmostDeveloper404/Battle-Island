@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 1715535455}
   - component: {fileID: 1661143576433637361}
   - component: {fileID: 3060403082139814279}
+  - component: {fileID: 2329484835771958122}
   m_Layer: 10
   m_Name: SpeedBoost
   m_TagString: Untagged
@@ -293,6 +294,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84095166a0d6337439a003c6dfbef24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2329484835771958122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269123446276032416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82321a0d4434a4b42bc67504e7d0dc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderers:
+  - {fileID: 5949501831905524876}
 --- !u!1001 &4994902951301554184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -369,5 +384,10 @@ PrefabInstance:
 --- !u!4 &4817669318615255011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9f5d32e28cb7ef0479f3dd250c3e4138, type: 3}
+  m_PrefabInstance: {fileID: 4994902951301554184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5949501831905524876 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9f5d32e28cb7ef0479f3dd250c3e4138, type: 3}
   m_PrefabInstance: {fileID: 4994902951301554184}
   m_PrefabAsset: {fileID: 0}
