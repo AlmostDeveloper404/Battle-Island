@@ -4,6 +4,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public AudioSource BoostSound;
+    public AudioSource DeathSounds;
 
     private void Awake()
     {
@@ -20,5 +21,12 @@ public class AudioManager : MonoBehaviour
     {
         BoostSound.clip = sound.clip;
         BoostSound.Play();
+    }
+
+    public void DeathSound(AudioSource audioSource)
+    {
+        DeathSounds.clip = audioSource.clip;
+
+        audioSource.Play();
     }
 }
