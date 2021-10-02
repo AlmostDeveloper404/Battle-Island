@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     UIManager uIManager;
 
+    public GameObject LosePanal;
     public GameObject StartPanal;
     public Text LevelText;
 
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
-        FinalPanal.SetActive(true);
+        LosePanal.SetActive(true);
         //SceneManager.LoadScene(0);
     }
 
