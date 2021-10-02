@@ -14,10 +14,16 @@ public class PlayerHealth : MonoBehaviour
 
     UIManager uiManager;
 
+    public bool isFirstLevel = false;
+
     
 
     void Start() 
     {
+        if (isFirstLevel)
+        {
+            PlayerPrefs.SetInt("Health",3);
+        }
         _health = PlayerPrefs.GetInt("Health",_health);
         gameManager = GameManager.instance;
         uiManager = UIManager.instance;
