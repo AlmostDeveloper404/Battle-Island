@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start() 
     {
-        _health = PlayerPrefs.GetInt("Health");
+        _health = PlayerPrefs.GetInt("Health",_health);
         gameManager = GameManager.instance;
         uiManager = UIManager.instance;
         uiManager.UpdateHealth(_health);
