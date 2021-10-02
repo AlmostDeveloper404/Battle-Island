@@ -1,9 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
+    public int CurrentScene;
+
+    UIManager uIManager;
+
+    public GameObject StartPanal;
+    public Text LevelText;
 
     private void Awake()
     {
@@ -13,6 +21,14 @@ public class GameManager : MonoBehaviour
             return;
         }
         instance = this;
+    }
+
+    private void Start()
+    {
+        StartPanal.SetActive(true);
+        LevelText.text = "Level " + CurrentScene ;
+        uIManager = UIManager.instance;
+        uIManager.UpdateLevel(CurrentScene);
     }
 
     public GameObject FinalPanal;
