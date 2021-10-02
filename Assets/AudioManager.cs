@@ -3,11 +3,11 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    public AudioSource BoostSound;
-    public AudioSource DeathSounds;
+    AudioSource BoostSound;
 
     private void Awake()
     {
+        BoostSound = GetComponent<AudioSource>();
         if (instance!=null)
         {
             Destroy(gameObject);
@@ -21,12 +21,5 @@ public class AudioManager : MonoBehaviour
     {
         BoostSound.clip = sound.clip;
         BoostSound.Play();
-    }
-
-    public void DeathSound(AudioSource audioSource)
-    {
-        DeathSounds.clip = audioSource.clip;
-
-        audioSource.Play();
     }
 }

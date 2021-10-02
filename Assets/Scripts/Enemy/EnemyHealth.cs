@@ -24,9 +24,11 @@ public class EnemyHealth : MonoBehaviour
 
     public void Die()
     {
-        audioManager.DeathSound(DeathSound);
+        DeathSound.transform.parent = null;
+        DeathSound.Play();
+
         Instantiate(_explosionPrefab, transform.position, transform.rotation);
         Instantiate(_destroyPrint, transform.position, _destroyPrint.transform.rotation);
-        Destroy(gameObject);
+        Destroy(gameObject,.001f);
     }
 }
