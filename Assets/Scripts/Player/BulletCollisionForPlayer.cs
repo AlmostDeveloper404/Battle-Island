@@ -5,6 +5,7 @@ public class BulletCollisionForPlayer : MonoBehaviour
     public int Damage;
     EnemyManager enemyManager;
     SphereCollider sphereCollider;
+    [SerializeField] private GameObject _effectPrefabe;
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class BulletCollisionForPlayer : MonoBehaviour
 
     void DestroyBullet()
     {
+        Instantiate(_effectPrefabe, transform.position, _effectPrefabe.transform.rotation);
         Destroy(gameObject);
     }
 }

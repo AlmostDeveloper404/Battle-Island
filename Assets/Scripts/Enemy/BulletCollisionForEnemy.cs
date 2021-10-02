@@ -5,6 +5,8 @@ public class BulletCollisionForEnemy : MonoBehaviour
 
     SphereCollider sphereCollider;
 
+    [SerializeField] private GameObject _effectPrefabe;
+
     private void Start()
     {
         sphereCollider = GetComponentInChildren<SphereCollider>();
@@ -24,6 +26,7 @@ public class BulletCollisionForEnemy : MonoBehaviour
 
     void DestroyBullet()
     {
+        Instantiate(_effectPrefabe, transform.position, _effectPrefabe.transform.rotation);
         Destroy(gameObject);
     }
 }
