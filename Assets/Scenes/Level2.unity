@@ -1032,13 +1032,14 @@ GameObject:
   - component: {fileID: 51838104}
   - component: {fileID: 51838103}
   - component: {fileID: 51838105}
+  - component: {fileID: 51838106}
   m_Layer: 5
   m_Name: FinalPanal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &51838102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1107,7 +1108,7 @@ Animation:
   m_GameObject: {fileID: 51838101}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b1d9fe6ddda288741a7ddf2195b1bdcd, type: 2}
+  m_Animation: {fileID: 7400000, guid: 2fbeee1cdad1bde4bbfe96eb2847b7d4, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 2fbeee1cdad1bde4bbfe96eb2847b7d4, type: 2}
   - {fileID: 7400000, guid: b1d9fe6ddda288741a7ddf2195b1bdcd, type: 2}
@@ -1115,6 +1116,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &51838106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51838101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3abb77e3503ff49b59fb6bbfbd2419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &52601721
 PrefabInstance:
   m_ObjectHideFlags: 0
