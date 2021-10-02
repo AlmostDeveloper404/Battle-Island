@@ -13,4 +13,9 @@ public class Menu : MonoBehaviour
         Debug.Log("Yep");
         Application.Quit();
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
