@@ -113,9 +113,9 @@ MonoBehaviour:
   timer: 0
   ShotSound: {fileID: 5484029688915627323}
   ShotEffect: {fileID: 260237277819048391, guid: ab4de36d6e4ea9649ac6ffe050c43fd1, type: 3}
-  BulletSpeed: 40
-  Preb: {fileID: 2673632978114147163, guid: 2b16123eff392a1408ea4e4741edc109, type: 3}
+  Preb: {fileID: 2673632978114147163, guid: 53d85bd892950944c92d0e1f1c88db7e, type: 3}
   FirePoint: {fileID: 6595057584251316530}
+  BulletSpeed: 40
 --- !u!1 &5223002817862986198
 GameObject:
   m_ObjectHideFlags: 0
