@@ -22909,6 +22909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthText: {fileID: 2009049722}
+  LevelText: {fileID: 2009014163}
 --- !u!114 &1280034295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34306,6 +34307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2c5e67fb32e8e40bf182026420453d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentScene: 7
   FinalPanal: {fileID: 51838101}
 --- !u!4 &1885477199 stripped
 Transform:

@@ -16,9 +16,15 @@ public class UIManager : MonoBehaviour
     }
 
     public Text HealthText;
+    public Text LevelText;
 
     public void UpdateHealth(int currentHealth)
     {
         HealthText.text = "x" + currentHealth;
+    }
+
+    public void UpdateLevel(int currentLevel)
+    {
+        LevelText.text = currentLevel.ToString();
     }
 }
