@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 4942010428085901881}
   - component: {fileID: 1142456903702648452}
   - component: {fileID: 8781490174290790715}
+  - component: {fileID: 629620380751907049}
   m_Layer: 10
   m_Name: GranadeBoost
   m_TagString: Untagged
@@ -421,6 +422,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84095166a0d6337439a003c6dfbef24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &629620380751907049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569956482653697982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82321a0d4434a4b42bc67504e7d0dc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderers:
+  - {fileID: 5543008915025602587}
 --- !u!1001 &6569956482686530719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -497,5 +512,10 @@ PrefabInstance:
 --- !u!4 &6676469769873609588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 05f0bc7db2f9b69419d5fe0c76a04fe5, type: 3}
+  m_PrefabInstance: {fileID: 6569956482686530719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5543008915025602587 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 05f0bc7db2f9b69419d5fe0c76a04fe5, type: 3}
   m_PrefabInstance: {fileID: 6569956482686530719}
   m_PrefabAsset: {fileID: 0}

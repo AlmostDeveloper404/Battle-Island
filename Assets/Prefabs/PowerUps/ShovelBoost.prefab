@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 3177767005477513412}
   - component: {fileID: 8019762744336991259}
   - component: {fileID: 4124975151065538347}
+  - component: {fileID: 6828197508904880163}
   m_Layer: 10
   m_Name: ShovelBoost
   m_TagString: Untagged
@@ -293,6 +294,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84095166a0d6337439a003c6dfbef24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6828197508904880163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151090561729008723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82321a0d4434a4b42bc67504e7d0dc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderers:
+  - {fileID: 3596875385368738858}
 --- !u!1001 &2750360969457524910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -369,5 +384,10 @@ PrefabInstance:
 --- !u!4 &2423367366258722629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c8931ae939988094580241e1e2bac0ce, type: 3}
+  m_PrefabInstance: {fileID: 2750360969457524910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &3596875385368738858 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c8931ae939988094580241e1e2bac0ce, type: 3}
   m_PrefabInstance: {fileID: 2750360969457524910}
   m_PrefabAsset: {fileID: 0}
