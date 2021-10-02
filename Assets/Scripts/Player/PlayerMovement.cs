@@ -7,11 +7,15 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody _rigidbody;
 
-
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
+
+    
+
+    
+
 
     void FixedUpdate()
     {
@@ -22,10 +26,11 @@ public class PlayerMovement : MonoBehaviour
     {
         _directionToMove = Vector3.zero;
         
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) )
         {
             transform.rotation = Quaternion.identity;
-            _directionToMove = Vector3.forward; 
+            _directionToMove = Vector3.forward;
         }
 
         if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
@@ -38,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
             _directionToMove = Vector3.right;
+            
+            
         }
         
         if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
@@ -46,9 +53,12 @@ public class PlayerMovement : MonoBehaviour
             _directionToMove = Vector3.left;
         }
 
+        
+
         return _directionToMove;
     }
 
+    
     public void IncreaseSpeed()
     {
         _speed *= 2f;

@@ -9,7 +9,9 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private Transform _firePoint;
     public GameObject ShootEffect;
 
-    private float _timer; 
+    private float _timer;
+
+    public AudioSource ShootSound;
 
     void Update()
     {
@@ -23,6 +25,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Shoot()
     {
+        ShootSound.Play();
         _timer = 0f;
         GameObject shootEffect = Instantiate(ShootEffect,_firePoint.position,_firePoint.rotation);
         Destroy(shootEffect,2f);

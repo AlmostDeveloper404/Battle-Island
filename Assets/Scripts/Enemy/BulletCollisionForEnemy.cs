@@ -13,20 +13,19 @@ public class BulletCollisionForEnemy : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Yep");
         sphereCollider.enabled = false;
         PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
-        
+        Vector3 point= other.ClosestPoint(transform.position);
         if (playerHealth)
         {
             playerHealth.TakeDamage();
         }
-        DestroyBullet();
+        DestroyBullet(point);
     }
 
-    void DestroyBullet()
+    void DestroyBullet(Vector3 point)
     {
-        Instantiate(_effectPrefabe, transform.position, _effectPrefabe.transform.rotation);
+        Instantiate(_effectPrefabe, point, _effectPrefabe.transform.rotation);
         Destroy(gameObject);
     }
 }
