@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField]private int _health = 3;
+    public static int _health = 3;
 
     private Vector3 _playerStartPosition;
 
@@ -14,9 +14,11 @@ public class PlayerHealth : MonoBehaviour
 
     UIManager uiManager;
 
+    
+
     void Start() 
     {
-        _health = PlayerPrefs.GetInt("Health",_health);
+        _health = PlayerPrefs.GetInt("Health");
         gameManager = GameManager.instance;
         uiManager = UIManager.instance;
         uiManager.UpdateHealth(_health);
@@ -63,10 +65,17 @@ public class PlayerHealth : MonoBehaviour
     {
         _health++;
         uiManager.UpdateHealth(_health);
+        PlayerPrefs.SetInt("Health",_health);
     }
 
     public int GetHealth()
     {
         return _health;
+    }
+
+    [ContextMenu("DeleteKeys")]
+    public void DeleteKeys()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
