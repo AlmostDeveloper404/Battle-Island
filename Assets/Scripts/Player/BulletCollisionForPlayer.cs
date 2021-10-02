@@ -7,12 +7,17 @@ public class BulletCollisionForPlayer : MonoBehaviour
     SphereCollider sphereCollider;
     [SerializeField] private GameObject _effectPrefabe;
 
+    AudioManager audioManager;
+
+    public AudioSource BulletCollisionSound;
+
     private void Awake()
     {
         sphereCollider = GetComponentInChildren<SphereCollider>();
     }
     private void Start()
     {
+        audioManager = AudioManager.instance;
         enemyManager = EnemyManager.instance;
     }
 
@@ -31,6 +36,7 @@ public class BulletCollisionForPlayer : MonoBehaviour
 
     void DestroyBullet()
     {
+        audioManager.PlaySound(BulletCollisionSound);
         Instantiate(_effectPrefabe, transform.position, _effectPrefabe.transform.rotation);
         Destroy(gameObject);
     }

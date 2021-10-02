@@ -3,6 +3,7 @@ using UnityEngine;
 public class EagleCollision : MonoBehaviour
 {
     GameManager gameManager;
+    public AudioSource LastExplosion;
 
     private void Start()
     {
@@ -13,6 +14,7 @@ public class EagleCollision : MonoBehaviour
     {
         if (other.GetComponentInParent<BulletTrigger>())
         {
+            LastExplosion.Play();
             gameManager.Lose();
         }
     }
