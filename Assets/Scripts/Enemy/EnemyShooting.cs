@@ -8,10 +8,10 @@ public class EnemyShooting : MonoBehaviour
     public AudioSource ShotSound;
     public GameObject ShotEffect;
 
-    public float BulletSpeed;
-
     public GameObject Preb;
     public Transform FirePoint;
+
+    public float BulletSpeed;
 
     private void Update()
     {
@@ -26,9 +26,9 @@ public class EnemyShooting : MonoBehaviour
     void Shoot()
     {
         ShotSound.Play();
-        GameObject effect= Instantiate(ShotEffect,FirePoint.position,FirePoint.rotation);
+        GameObject effect= Instantiate(ShotEffect,FirePoint.position,transform.rotation);
         Destroy(effect,2f);
-        GameObject BulletGO = Instantiate(Preb,FirePoint.position,FirePoint.rotation, transform);
-        BulletGO.GetComponent<Rigidbody>().velocity = transform.forward * BulletSpeed;
+        GameObject bulletGO= Instantiate(Preb,FirePoint.position,FirePoint.rotation);
+        bulletGO.GetComponent<Rigidbody>().velocity = FirePoint.forward * BulletSpeed;
     }
 }
