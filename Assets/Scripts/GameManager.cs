@@ -42,14 +42,12 @@ public class GameManager : MonoBehaviour
     [ContextMenu("LoadNextLevel")]
     public void LoadNextLevel()
     {
-        Debug.Log("Yep");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 
     public void Lose()
     {
         LosePanal.SetActive(true);
-        //SceneManager.LoadScene(0);
     }
 
     public void BackToMenu()
